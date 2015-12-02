@@ -7,6 +7,7 @@ public class Generador : MonoBehaviour {
     public float tiempo = 2f; // Tiempo entre enemigos
     public GameObject enemigo; // Enemigo a generar
 
+
     private float siguiente_enemigo = 0;
 	
 	void Start () {
@@ -20,7 +21,8 @@ public class Generador : MonoBehaviour {
             Vector3 posicion = new Vector3(transform.position.x + Random.Range(minimo, maximo), transform.position.y, transform.position.z);
             siguiente_enemigo = Time.time + tiempo;
             Instantiate(enemigo, posicion, transform.rotation);
-        }
+	
+		}
 	}
 
     // Para visualizar los limites en el editor
