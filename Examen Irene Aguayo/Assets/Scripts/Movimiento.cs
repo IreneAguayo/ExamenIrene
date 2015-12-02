@@ -6,6 +6,7 @@ public class Movimiento : MonoBehaviour
 
     Rigidbody2D rg;
     public float fuerza = 5f;
+	public float maxPos = 2.2f;
 
     // Use this for initialization
     void Start()
@@ -16,6 +17,7 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.A))
         {
             mueve_izquierda();
@@ -25,6 +27,7 @@ public class Movimiento : MonoBehaviour
         {
             mueve_derecha();
         }
+
     }
     void mueve_derecha()
     {
